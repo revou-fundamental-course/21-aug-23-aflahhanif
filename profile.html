@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Our Profile</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="logo"><a href="#"><img src="assets/logo.png" width="40" height="40"></a></li>
+                <li id="link"><a href="index.html#banner">Home</a></li>
+                <li id="link"><a href="#">Our Profile</a></li>
+                <li id="link"><a href="#">Achievement</a></li>
+                <li id="link"><a href="index.html#message">Message Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="banner">
+            <h2>About Us</h2>
+            <p>A brief description about our platform</p>
+            <div>
+                <img src="assets/banner1.jpg" class="mySlides">
+                <img src="assets/banner2.jpg" class="mySlides">
+                <img src="assets/banner3.jpg" class="mySlides">
+                <br>
+                <button onclick="plusDivs(-1)">Prev</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </div>
+        </div>
+
+        <div id="aboutUs">
+            <h2>About Us</h2>
+            <p>Welcome to our our website, your gateway to mastering the digital skills of today and tomorrow. Our
+                platform was born out of the belief that in this fast-paced digital age, acquiring and honing digital
+                skills is not just an option, but a necessity. At our platform, we're passionate about empowering
+                individuals from all walks of life to thrive in the digital landscape. Whether you're looking to
+                jumpstart a new career, enhance your current skill set, or simply stay ahead of the technological curve,
+                we've got you covered.</p>
+            <p>Join our thriving community of learners, where you can connect with fellow digital enthusiasts, share
+                insights, and learn from each other's experiences. Our support team is always here to assist you on your
+                learning path, ensuring that you have the guidance you need to overcome challenges and reach your goals.
+                Whether you're a beginner taking your first steps into the digital world or a seasoned professional
+                aiming to stay at the forefront of innovation, our platform is your trusted companion on your journey to
+                digital mastery.</p>
+        </div>
+
+        <div id="visiMisi">
+            <h2>Vision & Mission</h2>
+            <div id="wrapper">
+                <div class="visi">
+                    <h3>Vision</h3>
+                    <p>At our platform, our vision is to democratize digital education and empower individuals worldwide
+                        to thrive in the digital age. We aspire to be the premier online learning platform where anyone,
+                        regardless of their background or location, can access high-quality digital skill courses that
+                        propel them towards success.</p>
+                </div>
+                <div class="misi">
+                    <h3>Mission</h3>
+                    <p>Our mission is to bridge the digital skills gap by offering a comprehensive range of courses that
+                        cater to the evolving needs of the digital landscape. We are committed to providing accessible,
+                        affordable, and engaging learning experiences that equip learners with the practical skills and
+                        knowledge they need to excel in their careers and pursue their passions.</p>
+                    <p>Through our unwavering commitment to our vision and mission, our platform is dedicated to playing
+                        a pivotal role in shaping the digital leaders of tomorrow and contributing to a more digitally
+                        literate world. Join us on this transformative learning journey and be part of the digital
+                        revolution.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Created By RevoU</p>
+    </footer>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var x = document.getElementsByClassName('mySlides');
+
+            if (n > x.length) {
+                slideIndex = 1;
+            } else if (n < 1) {
+                slideIndex = x.length;
+            }
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+        setInterval(() => {
+            plusDivs(1);
+        }, 3000)
+    </script>
+</body>
+
+</html>
